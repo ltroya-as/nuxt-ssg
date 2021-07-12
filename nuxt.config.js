@@ -40,7 +40,17 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/apollo',
+    '@nuxtjs/axios',
   ],
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'https://api.graphql.jobs'
+      }
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
